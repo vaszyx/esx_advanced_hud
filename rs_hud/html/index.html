@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>rs_hud</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="root" class="hud hidden">
+    <header class="topbar">
+      <div class="brand">LimeV • HUD</div>
+      <div class="top-info">
+        <span id="voiceMode" class="chip">V: 1</span>
+        <span id="clock" class="chip">00:00</span>
+      </div>
+    </header>
+
+    <section class="status">
+      <div class="bar" data-label="HP"><div id="hp" class="fill"></div></div>
+      <div class="bar" data-label="Armor"><div id="arm" class="fill"></div></div>
+      <div class="bar" data-label="Hunger"><div id="hun" class="fill"></div></div>
+      <div class="bar" data-label="Durst"><div id="thr" class="fill"></div></div>
+      <div class="chip" id="seatbelt">Seatbelt</div>
+      <div class="chip" id="talking">Talk</div>
+    </section>
+
+    <section id="veh" class="vehicle hidden">
+      <div class="speed">
+        <span id="speedVal">0</span>
+        <span id="speedUnit">KMH</span>
+      </div>
+      <div class="veh-row">
+        <div class="bar small" data-label="RPM"><div id="rpm" class="fill"></div></div>
+        <div class="chip" id="gear">G:0</div>
+        <div class="bar small" data-label="Fuel"><div id="fuel" class="fill"></div></div>
+      </div>
+    </section>
+
+    <footer class="bottombar">
+      <div id="street">-</div>
+      <div id="dir" class="chip">N</div>
+    </footer>
+
+    <div id="settings" class="modal hidden">
+      <div class="modal-card">
+        <h3>HUD Einstellungen</h3>
+        <p>Hier kannst du später Optionen einbauen (Einheiten, Transparenz ...)</p>
+        <button id="closeSettings">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./libs/jquery-3.7.1.min.js"></script>
+  <script src="./libs/gsap.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
